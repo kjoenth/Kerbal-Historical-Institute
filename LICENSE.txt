@@ -1,0 +1,13 @@
+ 
+Original KSP Parts by Squad, Fiddlestyx, Blspblackdeath,Camelotking524, Nli2work, TheMoonRover is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+Based on a work at https://kerbalspaceprogram.com/ .
+All original assets are the property of Squad, released as Freeware.
+Part update/conversion is the work of Fiddlestyx
+Part Thrust Vectoring is the work of Camelotking524
+Part update/TechTree inclusion is the work of Blspblackdeath
+Part mesh correction by Nli2work
+Part update/TechTree inclusion is the work of TheMoonRover
+Part update/TechTree inclusion is the work of SparkyFox
+Part update/TechTree inclusion is the work of seanth
+
+This unedited license must be included in any redistribute of this work.

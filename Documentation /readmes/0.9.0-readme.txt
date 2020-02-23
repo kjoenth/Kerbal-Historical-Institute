@@ -1,0 +1,283 @@
+*******************************************
+        __   ___  ______      ______                                         
+      /  /  /  / /  __  \   /   _   \                              
+     /  / /  /  /  /  |_|  /   / |  |                        
+    /  //  /   |  |___    /   /_/  /                         
+   /      /    \___   \  /   ____ /                                        
+  /  /|  |   ___   \  | /   /                                   
+ /  / |  |   \  \_/  / /   /                                       
+/__/  |__|    \_____/ /___/                                 
+
+*******************************************
+(I'm terrible at ASCII art :P)
+
+Thank you for downloading the Kerbal Space Program!
+
+Version 0.9.0
+====================================================================================================
+Installation:
+
+* Unzip the contents of this package onto a directory of your choice (ex. C:/Program Files/KSP)
+* If you plan to overwrite a previous version of KSP with this one, please delete the contents of the folder before unzipping.
+
+
+WARNING: It's very likely that parts and/or ships created on previous versions will be incompatible with the latest release. At this point in development it is quite impossible to ensure backward-compatibility at each step, so please keep this in mind. If you encounter something that could be a bug, try again on a fresh installation and no addon parts. It may just be an incompatibility issue.
+
+
+===================================================================================================
+Disclaimer:
+THIS SOFTWARE IS CONSIDERED TO BE IN ALPHA STATE, AND MAY CONTAIN BUGS. SQUAD AND SQUAD STAFF TAKE NO
+RESPONSIBILITY FOR ANY DAMAGE OR LOSS OF DATA THAT MAY OCCUR AS A DIRECT OR INDIRECT RESULT OF USING
+THIS SOFTWARE. USE AT YOUR OWN RISK.		
+
+(not that any of the above should happen anyway, but it's good to be on the safe side)
+
+====================================================================================================
+Credits:
+
+Lead Developer, Game Design, Original Concept and Sound:
+Felipe Falanghe (a.k.a HarvesteR)
+
+Programming: Alejandro Mora
+Content Designer: Jacobo Rosas
+Project Management and WebMaster: Alejandro Flores
+
+Additional Art:
+Iván Vázquez
+Juan Carlos Demeneghi
+
+Executive Producers:
+Adrián Goya
+Ezequiel Ayarza
+
+
+
+ChangeLog:
+
+==================================== v0.9.0 ==================================================
+
+Official 0.9 release
+
+Bug Fixes:
+* Fixed a problem with the input settings screen on low resolutions
+* Set minimum resolution to 800x600 
+
+==================================== v0.9.0X5 ================================================
+
+New:
+* Parachutes can no longer deploy in a vaccuum (they wait until there is some atmosphere to open)
+* Added staging stack scrolling through the Home and End keys
+* Added key mappings for Zoom In/Out, Scroll View Up/Down (VAB) and Scroll Icons Up/Down
+* Added key mappings to rotate the camera
+
+Bug Fixes:
+* Fixed the G meter spiking up towards infinity at large distances.
+* Fixed some more details with the settings screen
+* Changed the layout of the input mapping screen
+* Fixed a problem with the sound loading system, that wouldn't load custom sounds
+
+
+===================================== v0.9.0x4 ================================================
+
+New:
+* Added Settings screen to configure Audio, Video and Input settings
+* Removed the old Launcher menu
+* Added an input mapping for the Precision Controls Toggle
+* Tweaked the settings UI graphics a bit
+* Changed attachment mode to the previous one, since the new one was causing stability problems in flight
+
+Bug Fixes:
+* Staging would still sometimes fire out of order
+* Fixed a problem with the symmetry that could cause the game to crash sometimes
+
+===================================== v0.9.0x3 ================================================
+
+Bug Fixes:
+* Struts could cause the game to crash if they didn't find their targets
+* Alt+copying parts inside grouped icons would eventually lead to a crash
+* Heavily modified staging sequences would sometimes fire out of order
+
+===================================== v0.9.0x2 ================================================
+
+New:
+* all parts now have a fuelCrossFeed value (True/False) to enable/disable fuel flow
+* Added a new icon for strut connectors
+* Added a mouse grab offset on the VAB, so parts can be grabbed without twitching to reach the cursor
+
+Bug Fixes:
+* SAS could cause pod to wobble if activated with nothing more than the pod
+* Debug console key not consistent with different keyboard layouts (changed to Alt+F2)
+* Undo/Redo sometimes caused struts to lose targets
+* staging sometimes resetting itself
+* Game would hang for a few seconds if selecting/placing a large number of parts at once.
+* loading would sometimes crash when loading a ship with struts
+* some icons were not being grouped correctly according to part state
+
+===================================== v0.9.0x1 ================================================
+
+New:
+* Stages are now persistent when manually edited.
+* Stages are now stored in relative values. This means they're now smarter
+* Parts can now specify their preferred relative stage though the cfg
+* Editing the staging sequence now creates Undo states.
+* The Debug Console can now be opened in the loading screen to debug load problems
+* Stages can now be manually created and, when empty, deleted
+* Stages are now represented as groups with parts inside them, instead of just separated by indicators
+* The staging stack now scrolls manually using the mousewheel (when mouseing over it)
+* Icons in the staging stack can now be multiple selected and moved as a group
+* Whole stages can now be dragged and repositioned
+* Stages can now be reset manually through a reset button
+* Empty stages delete themselves in flight
+* Active parts in previous stages move up to the current stage.
+* Parts on the VAB list will now display their stats when hovered over.
+* The tooltip for parts in the VAB will no longer go lower than the screen
+* Holding shift while selecting a part in the VAB will now select the pod so the whole ship can be moved
+* Parts now have an ActivatesEvenIfDisconnected parameter on the cfg to allow them to be activated after jettisoning
+* The VS Gauge now uses a log scale, to allow greater precision with small values
+* The Strut Connector. A compound part to create physical linkages between any 2 parts
+* Parachutes now have a 'useAGL' parameter. If that's enabled, it will deploy when it reaches deploy altitude from ground level 
+* Symmetrically placed Icons are grouped into a single icon
+
+
+Bug Fixes:
+* Fixed a bug that caused parts to activate out of sequence sometimes.
+* The scroll wheel is no longer read if the application is unfocused.
+* Staging lock is now preserved if the application is unfocused and refocused.
+* Fixed the MET clock, which would loop back to 00:00:00 when a mission went on for longer than 24 hours 
+* Changed the debug console key to Alt + the key left of 1. It would interfere with the throttle controls in flight.
+* Fixed parachutes not deploying if not set to the last stage. (they can still deploy when jettisoned)
+* Fixed a silent error when parts set an explosion potential higher than 1.0
+* Eliminated the jitter on the VS gauge
+* Changed the physical attachments between parts again, so the stack is less wobbly overall
+
+
+===================================== v0.8.5 ================================================
+
+New:
+* Added copying of parts (and sets of parts) by holding Alt while clicking on them.
+* Replaced tricoupler textures and UV mapping (UV map by Dippeggs)
+* Parachutes can now deploy automatically if jettisoned along with other parts (allowing for parts to be safely landed)
+* Stage decouplers can now share fuel across stages.
+* Added Keys to control the camera in the VAB (+/- for zooming, pgup/pgdown for scrolling)
+* Added Keys to control the camera in flight (+/- for zooming)
+* Added some sound effects for the parachute opening
+* Added cfg-definable parameter for parachute autodeployment delay
+* Added a debugging console to the game (can be toggled with Ctrl+Alt+Shift+C)
+* Right-clicking the Symmetry Button will now step the symmetry mode back.
+* It is no longer possible to select a part of the ship while the mouse is over any interface items.
+* Added toggle key to switch between precision or instant input modes (Caps Lock)
+* Pitch, Yaw and Roll gauges change color to indicate mode (orange for instant, cyan for precision)
+* Exposed Kd, Ki and Kp parameters for tuning the SAS and CommandPod modules
+
+Bug Fixes:
+* Fixed the staging lock LED not turning purple after launch
+* Icons no longer show a transparent border floating around then mousing over disconnected parts.
+* Fixed a bug where deleting a symmetrical part would sometimes leave it's counterparts floating around.
+* Fixed a bug where creating a new stage with a decoupler and then removing it would generate errors.
+* Fixed most sound volume decay over distance problems.
+* Fixed a bug that caused a massive performance drop when fuel tanks emptied (fuel tank switch lag bug)
+* The Flight camera will now remain always centered on the ship's center of mass.
+* The Screenshot function will now create a Screenshots directory if one isn't found.
+* The altimeter will now go past 999,999K correctly (it will move up to 1000M, then 1000G, 1000T and so on)
+* Fixed a bug that could cause large ships to explode at 5,000m altitude.
+
+
+===================================== v0.8.4 =====================================================
+
+Bug Fixes:
+* Fixed a small but incredibly disruptive bug which prevented engines from being connected to fuel tanks
+
+===================================== v0.8.3 =====================================================
+
+New:
+* Added key to lock staging, to prevent accidental jettisoning (remember to set it off later). Set to Alt+L
+* Added a tooltip for the Symmetry Button
+
+Bug Fixes:
+* Fixed A TON of bugs with the symmetry and ship construction in general. Game is stable again.
+* Fixed a bug where parts would lose staging info and revert to default when returning from flight to the VAB. (the staging reset bug)
+* Fixed a glitch introduced in 0.8.3 RC1 that allowed parts to be attached to frozen parts.
+
+
+===================================== v0.8.2 ======================================================
+
+This version is a hotfix for a couple of ugly bugs found with the 0.8.1 release.
+
+WARNING:
+
+The 0.8.1 release introduced a few changes to the .craft file format, so it is possible that ships
+created with versions prior to 0.8.1 might not be compatible with the new version. 
+
+Bug Fixes:
+* Fixed a serious bug where swapping about symmetrical parts would crash the game
+* Pod cannot be dropped if an Escape Tower (PunchOut addon) is attached
+
+
+===================================== v0.8.1 =======================================================
+New:
+* Added options to use Angle Snapping when placing surface-aligned parts.
+* Symmetrical placement mode in the VAB.
+* It's now possible to set aside a part of group of parts. This enables adding parts in between others without deleting half the ship.
+* Sound Normalizer, keeps the volume balanced even with 50+ boosters firing
+* Added framerate cap to keep GPUs from screaming on light scenes. (configurable through the settings.cfg file)
+* Deleting a part now requires clicking the parts list. This prevents accidental deletion. (Or you can also press 'Delete)
+* Fuel can now flow through Strut parts like the tricoupler 
+
+Bug Fixes:
+* Fixed bug where starting a new ship with a loaded multi-stage ship would create empty stages
+* Smoke trail effects now fade away when nearing the edge of the atmosphere
+* Fixed SkySphere culling issues at large distances
+* Added cfg parameter to enforce a symmetry mode when stacking (like 3 under the tricoupler)
+* Updated editor tutorial to reflect the changes in this update
+
+
+====================================== v0.8 ========================================================
+New:
+* Saving and Loading buttons in the interface, as well as a ship loading dialog for picking new ships.
+* Ship name field in the editor, allows saving ships with any filename.
+* Screenshot button to capture the screen to file.
+* functioning MET indicator in the flight UI
+* Pages in the VAB part list, whenever the parts exceed the size of the list.
+* New skins for the UI windows that pop up. (like the flight results dialog)
+* A new splash screen before the main menu enters.
+* SAS toggle with 'T' key
+* Option to Simulate in Background in the settings.cfg file
+* Undo/Redo actions in the VAB, by Ctrl+Z and Ctrl+Y
+* Fuel tanks are now stackable to increase fuel amount (and weight  )
+* On-screen text popup to let you know the current camera mode
+* Cfg interpreter can now parse 2D, 3D, and 4D Vectors, as well as rotations (in angle-axis format)
+* Cfg-defined thrust positions and orientations, make retro-rockets and any other craziness open for addon parts.
+* Parts may now create new stages for themselves through the cfg (used to be decouplers only)
+* New texture for the Solid Rocket Booster
+* The game now checks for updates against the KSP site, and let's you know if there is a new version available
+* Loading screen moved to before the main menu appears.
+
+Bug fixes: 
+* Liquid Engine particle effects responding to engine cutoff
+* Icon indicators for all parts that need to show information
+* Custom icons for all part types
+* VAB placement bug with tricouplers and fuel tanks (and decouplers)
+* Reposition the NavBall and main camera focus, so the ship isn't obscured by the interface - this one is kinda moot now, since the new camera centers the ship better, and the navball doesn't hide the ship anymore.
+* Pause also affecting particle effects
+* Pausing the game no longer produces a G-force peak
+* SRB mesh normals correction
+* Complete rewrite of the flight camera code. No more jitters and a number of new options in the settings.cfg
+* Relaunch button on pause menu. No need to end flight to relaunch.
+* Version text on main menu resetting after returning to it from game.
+* Inverted the middle mouse button zoom. Now mouseing forward brings the camera closer.
+* The text on the stage indicators no longer appears over other interface elements
+* Fixed excessive wobbliness with side-attached parts
+* Radial decouplers now have their own module (they used to share modules with the stack decoupler) 
+* Increased the inclination range for the VAB camera from 45° to 80°
+* Updated tutorial to reflect the changes made in this update (like the new cameras in flight).
+* Tweaked the Radial Decoupler separation. It can now eject lit SRBs safely away from the ship and not kill the crew everytime.
+
+
+====================================== v0.7.3 ========================================================
+
+* Initial Release
+
+
+===================================================================================================
+Copyright Notice:
+©SQUAD, 2011, ALL RIGHTS RESERVED.
